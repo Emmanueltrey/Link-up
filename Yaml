@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: chat-link-up
+    runtime: java
+    buildCommand: ./gradlew shadowJar
+    startCommand: java -jar build/libs/chat-link-up.jar
+    env: java
+    envVars:
+      - key: PORT
+        value: 8080
